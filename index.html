@@ -1,10 +1,40 @@
-<script type="importmap">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Link Uploader</title>
+  
+  <!-- 1. Tailwind CSS via CDN -->
+  <!-- This provides all the styling for the application -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 2. Babel Standalone for TSX/JSX -->
+  <!-- This script "translates" your .tsx files into JavaScript the browser can understand. -->
+  <!-- It's the key to making React with JSX work on a static site like GitHub Pages. -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <script type="importmap">
 {
   "imports": {
-    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
     "react/": "https://aistudiocdn.com/react@^19.1.1/"
   }
 }
 </script>
-full contents of index.html
+
+</head>
+<body class="bg-slate-900">
+  
+  <!-- The root element where the React application will be mounted -->
+  <div id="root"></div>
+
+  <!-- 3. Your Application's Entry Point -->
+  <!-- Note: type="text/babel" tells Babel to translate this script. -->
+  <!-- Note: src="./index.tsx" is a relative path that works correctly on GitHub Pages. -->
+  <script type="text/babel" data-type="module" src="./index.tsx"></script>
+
+</body>
+</html>
