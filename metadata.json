@@ -1,0 +1,5 @@
+{
+  "name": "Property Link Uploader",
+  "description": "A simple and elegant web application to submit property links to a Google Sheet. Paste your links, hit send, and let the automation handle the rest.",
+  "requestFramePermissions": []
+}
